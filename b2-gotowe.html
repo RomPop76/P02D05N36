@@ -17,25 +17,32 @@
             font-size: 40px;
             margin: 100px;
            border: 2px solib black;
-           background-color: #fff;
+           background-color: transparent;
            border-radius: 20px;
            box-shadow: 0 0 0 2px white, 0 0 0 4px black;
            overflow: hidden;
+           color: black;
+           transition: .25s .05s linear;
         }
 
         button::before {
             content: "";
             position: absolute;
-            width: 100%;
-            height: 0;
+            width: 0;
+            height: 100%;
             bottom: 0;
             left: 0;
             background-color: #000;
-            transition:  .3s;
+            transition:  .3s linear;
+            z-index: -1;
         }
 
         button:hover::before {
-            height: 100%;
+            width: 100%;
+        }
+
+        button:hover {
+            color: white;
         }
 
     </style>
